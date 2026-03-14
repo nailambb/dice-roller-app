@@ -7,8 +7,12 @@ const dotPositions: Record<number, number[]> = {
     6: [0, 2, 3, 5, 6, 8],
   };
   
-  function Die() {
-    const value = 5;
+  // 👀 Define the prop types
+  interface DieProps {
+    value: number;
+  }
+  
+  function Die({ value }: DieProps) { // 👀 Accept value as a prop
     const dots = dotPositions[value] ?? [];
   
     return (
@@ -28,4 +32,5 @@ const dotPositions: Record<number, number[]> = {
   }
   
   export default Die;
+  
   
