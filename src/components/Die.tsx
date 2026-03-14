@@ -20,6 +20,7 @@ const dotPositions: Record<number, number[]> = {
     return (
       <button
         onClick={onRoll} // 👀 Call parent's handler
+        aria-label={`Roll die showing ${value}`} // Accessibility
         className="grid grid-cols-3 grid-rows-3 gap-2 rounded-xl bg-white p-4 shadow-lg transition-transform hover:scale-105 active:scale-95"
         style={{ width: "120px", height: "120px" }}
       >
